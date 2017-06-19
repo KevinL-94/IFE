@@ -140,14 +140,40 @@ aside form {
 }
 
 aside form div {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 aside form label {
-    /*float: left;*/
+    width: 35%;
+    float: left;
+    text-align: right;
 }
 
 aside form p {
-    margin-left: 31%;
+    margin-left: 35%;
     color: #aaa;
+}
+
+aside form textarea {
+    width: 50%;
+    height: 100px;
+}
+
+aside .submit {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    background-color: #3355d0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/*footer样式*/
+footer {
+    color: #fff;
+    background-color: #000;
+    padding: 10px;
+    text-align: center;
 }

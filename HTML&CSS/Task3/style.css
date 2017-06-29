@@ -1,0 +1,116 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/*header样式*/
+header {
+    height: 60px;
+    line-height: 60px;
+    background-color: #24292e;
+    /*display: block;*/
+}
+
+.left-header {
+    float: left;
+    margin: 5px 10px;
+}
+
+.left-header img {
+    width: 50px;
+    height: 45px;
+}
+
+.right-header {
+    float: right;
+}
+
+.right-header li {
+    float: left;
+    margin-right: 30px;
+}
+
+.right-header a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.right-header a:hover {
+    color: #ddd;
+}
+
+/*main样式*/
+main {
+    background-color: #eee;
+    padding: 20px 160px 20px 240px;
+    margin: 30px;
+    border: 1px solid #999;
+    overflow: auto;
+}
+
+.column {
+    background-color: #fff; 
+    border: 1px solid #999;
+    padding: 20px;
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.center {
+    width: 100%;
+    height: 300px;
+    /*background-color: green;*/
+}
+
+.center h2 {
+    margin-bottom: 10px;
+}
+
+.center p {
+    text-indent: 2em;
+    line-height: 1.5;
+}
+
+.left {
+    width: 200px;
+    height: 300px;
+    margin-left: -100%;
+    right: 220px;
+    /*background-color: red;*/
+}
+
+.left img {
+    width: 80px;
+    height: 80px;
+}
+
+.left span {
+    vertical-align: top; 
+    /*display: block;*/
+    /*float: right;*/
+}
+
+.right {
+    width: 120px;
+    height: auto;
+    margin-left: -120px;
+    left: 140px;
+    /*background-color: blue;*/
+}
+
+.right img {
+    width: 70px;
+    height: 70px;
+    box-sizing: border-box;
+    margin: 5px;
+}
+
+/*footer样式*/
+footer {
+    text-align: center;
+    color: #fff;
+    background-color: #24292e;
+    line-height: 60px;
+    clear: both;
+} 

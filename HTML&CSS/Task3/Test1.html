@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圣杯布局</title>
+    <style>
+        header, footer {
+            height: 60px;
+            line-height: 60px;
+            color: #fff;
+            background-color: #24292e;
+            text-align: center;
+            clear: both;
+        }
+
+        main {
+            padding-left: 210px;
+            padding-right: 160px;
+        }
+
+        .column {
+            float: left;
+            position: relative;
+        }
+
+        #center {
+            height: 300px;
+            background-color: green;
+            width: 100%;
+        }
+
+        #left {
+            height: 300px;
+            background-color: red;
+            width: 200px;
+            margin-left: -100%;    /*main的宽度*/
+            right: 210px;
+        }
+
+        #right {
+            height: 300px;
+            background-color: blue;
+            width: 150px;
+            margin-left: -150px;    /*右边栏自身宽度*/
+            left: 160px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span>Header</span>
+    </header>
+
+    <main>
+        <div id="center" class="column">
+            <span>Center Column</span>
+        </div>
+
+        <div id="left" class="column">
+            <span>Left Column</span>
+        </div>
+
+        <div id="right" class="column">
+            <spen>Right Column</spen>
+        </div>
+    </main>
+
+    <footer>
+        <span>Footer</span>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IEF JavaScript Task1</title>
+</head>
+<body>
+  <label>请输入北京今天的空气质量：<input id="input" type="text"></label>
+
+  <button id="button">确认输入</button>
+
+  <div>您输入的数值是：<span id="display">尚未输入</span></div>
+
+<script>
+  (function() {
+    var input = document.getElementById("input");
+    var display = document.getElementById("display");
+    var btn = document.getElementById("button");
+
+    function handler() {
+      var aqi = parseInt(input.value);
+      if ((!isNaN(aqi)) && (aqi >= 0) && (aqi <= 1000)) {
+        display.innerText = aqi;
+      } else {
+        alert(input.value + "不是有效的AQI值，请输入0~1000中的整数！")
+      }
+    }
+
+    btn.onclick = function() {
+      handler();
+    };
+
+    input.onkeydown = function(event) {
+      if (event.keyCode === 13) {
+        handler();
+      }
+    };
+
+  })();
+</script>
+</body>
+</html>

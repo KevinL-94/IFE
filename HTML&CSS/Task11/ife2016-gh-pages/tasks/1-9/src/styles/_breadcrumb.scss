@@ -1,0 +1,17 @@
+.breadcrumb {
+  height: 30px;
+  line-height: 30px;
+  background-color: #fff;
+  margin: 56px 0 20px 260px;
+  padding-left: 20px;
+  font-size: 13px;
+  color: #999;
+
+  .item {
+    color: #37a9e5;
+  }
+
+  .divider {
+    margin: 0 4px;
+  }
+}

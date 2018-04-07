@@ -145,8 +145,8 @@ aside form div {
 
 aside form label {
     width: 35%;
-    float: left;
-    text-align: right;
+    float: left;    /* <label> is a incline element, float can make it become a block. */
+    text-align: right;    /* Only block element can be set width */
 }
 
 aside form p {

@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "dependencies": {
+    "node-sass": "^3.4.2",
+    "swig": "^1.4.2"
+  },
+  "scripts": {
+    "build": "swig render src/templates/index.html > dist/index.html; node-sass src/styles/style.scss > dist/style.css"
+  }
+}

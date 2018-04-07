@@ -1,0 +1,151 @@
+body {
+  width: 100%;
+  overflow: auto;
+  margin: 0;
+  color: #666;
+  background-color: #e9edec;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px; }
+
+a {
+  text-decoration: none; }
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.iconfont {
+  font-size: 14px; }
+
+.pull-right {
+  float: right; }
+
+.header {
+  width: 100%;
+  height: 56px;
+  overflow: hidden;
+  line-height: 56px;
+  background-color: #37a9e5;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  z-index: 1; }
+  .header a {
+    color: #fff; }
+
+.header-container {
+  width: 900px;
+  margin: auto; }
+  @media (max-width: 1460px) {
+    .header-container {
+      padding-left: 280px;
+      padding-right: 20px; } }
+
+.logo {
+  position: absolute;
+  left: 40px;
+  font-weight: normal;
+  font-size: 18px; }
+  .logo img {
+    height: 38px;
+    margin: 9px 5px 0 0;
+    float: left; }
+
+.login {
+  float: left;
+  margin-left: 20px; }
+
+.search-box {
+  float: left;
+  position: relative; }
+  .search-box label {
+    position: absolute;
+    left: 12px;
+    color: #aaa; }
+  .search-box input {
+    width: 280px;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 0 0 36px;
+    border: 0;
+    border-radius: 14px;
+    background-color: #fff; }
+    .search-box input:focus {
+      outline: none; }
+  .search-box .iconfont {
+    font-size: 16px;
+    position: relative;
+    top: 2px; }
+
+.breadcrumb {
+  height: 30px;
+  line-height: 30px;
+  background-color: #fff;
+  margin: 56px 0 20px 260px;
+  padding-left: 20px;
+  font-size: 13px;
+  color: #999; }
+  .breadcrumb .item {
+    color: #37a9e5; }
+  .breadcrumb .divider {
+    margin: 0 4px; }
+
+.body {
+  box-sizing: border-box;
+  overflow: hidden; }
+  @media (max-width: 1460px) {
+    .body {
+      padding-left: 280px;
+      padding-right: 20px;
+      width: 100%; } }
+
+.body-container {
+  width: 900px;
+  margin: auto;
+  padding-bottom: 20px; }
+
+.filter {
+  height: 84px;
+  background-color: #fff;
+  margin-bottom: 10px; }
+
+.history {
+  height: 65px;
+  background-color: #fff;
+  margin-bottom: 10px; }
+
+.stats {
+  height: 90px;
+  background-color: #fff;
+  margin-bottom: 10px; }
+
+.modules {
+  margin: -5px; }
+
+.module {
+  height: 300px;
+  float: left;
+  margin: 5px;
+  background-color: #fff; }
+
+.module-mid {
+  width: 300px; }
+
+.module-wide {
+  width: 590px; }
+
+.sidebar {
+  width: 260px;
+  height: 100%;
+  background-color: #151c39;
+  overflow: auto;
+  position: fixed;
+  left: 0;
+  top: 0; }
+

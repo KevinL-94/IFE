@@ -1,0 +1,144 @@
+//
+// 阉割版本的bootstrap网格系统
+//
+
+*,
+*:before,
+*:after{
+  box-sizing: border-box;
+}
+
+//网格中列的数量
+$grid-columns:              12 !default;
+
+//屏幕的尺寸
+$screen-xs:                  480px !default;
+
+$screen-sm:              768px !default;
+
+$screen-md:              992px !default;
+
+$screen-lg:              1200px !default;
+
+
+
+//清除浮动
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+//为每个列都设置通用的样式
+@mixin make-grid-columns() {
+  $i: 1;
+  $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}";
+  @for $i from (1 + 1) through $grid-columns {
+    $list: "#{$list}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}";
+  }
+  #{$list} {
+    position: relative;
+    // 防止内容为空的时候位置被其他元素占据
+    min-height: 1px;
+
+  }
+}
+
+
+//为什么要和make-grid-columns分开来设置呢??
+//我的理解是如果所有的lie都具有左浮动时,那么就会导致一个元素只甚至了col-md-的类在其他尺寸的屏幕中会出现左浮动
+//如果不设那么就是一个普通的div会占据一行
+@mixin float-grid-columns($class) {
+  $i: 1;
+  $list: ".col-#{$class}-#{$i}";
+  @for $i from (1 + 1) through $grid-columns {
+    $list: "#{$list}, .col-#{$class}-#{$i}";
+  }
+  #{$list} {
+    float: left;
+  }
+}
+
+//为列设置宽度等等
+@mixin calc-grid-column($index, $class, $type) {
+  @if ($type == width) and ($index > 0) {
+    .col-#{$class}-#{$index} {
+      width: percentage(($index / $grid-columns));
+    }
+  }
+  @if ($type == push) and ($index > 0) {
+    .col-#{$class}-push-#{$index} {
+      left: percentage(($index / $grid-columns));
+    }
+  }
+  @if ($type == push) and ($index == 0) {
+    .col-#{$class}-push-0 {
+      left: auto;
+    }
+  }
+  @if ($type == pull) and ($index > 0) {
+    .col-#{$class}-pull-#{$index} {
+      right: percentage(($index / $grid-columns));
+    }
+  }
+  @if ($type == pull) and ($index == 0) {
+    .col-#{$class}-pull-0 {
+      right: auto;
+    }
+  }
+  @if ($type == offset) {
+    .col-#{$class}-offset-#{$index} {
+      margin-left: percentage(($index / $grid-columns));
+    }
+  }
+}
+
+
+@mixin loop-grid-columns($columns, $class, $type) {
+  @for $i from 0 through $columns {
+    @include calc-grid-column($i, $class, $type);
+  }
+}
+
+// Create grid for specific class
+@mixin make-grid($class) {
+  @include float-grid-columns($class);
+  //为列设置宽度等等
+  @include loop-grid-columns($grid-columns, $class, width);
+  //为列设置类似left的特性
+  @include loop-grid-columns($grid-columns, $class, pull);
+  //为列设置类似right的特性
+  @include loop-grid-columns($grid-columns, $class, push);
+  //为列设置类似margin-left的特性
+  @include loop-grid-columns($grid-columns, $class, offset);
+}
+
+
+
+//主要用于清除浮动
+.row {
+  @include clearfix;
+}
+
+@include make-grid-columns;
+
+@include make-grid(xs);
+
+@media (min-width: $screen-sm) {
+  @include make-grid(sm);
+}
+
+@media (min-width: $screen-md) {
+  @include make-grid(md);
+}
+
+@media (min-width: $screen-lg) {
+  @include make-grid(lg);
+}
+

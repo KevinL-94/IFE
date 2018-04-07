@@ -1,0 +1,304 @@
+@import "../../bower_components/reset";
+
+/*变量*/
+
+//rem和px的比例
+$prop: 75;
+
+//内容的宽度
+$container_w: 750rem/$prop;
+
+//主色调
+$mainColor: rgb(128, 203, 209);
+
+/*mixin*/
+//字体大小
+@mixin font-dpr($font-size) {
+  font-size: $font-size;
+
+  [data-dpr="2"] & {
+    font-size: $font-size * 2;
+  }
+
+  [data-dpr="3"] & {
+    font-size: $font-size * 3;
+  }
+}
+
+;
+
+/*字体*/
+@font-face {
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_1458294480_350837.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_1458294480_350837.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_1458294480_350837.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/font_1458294480_350837.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_1458294480_350837.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-back:before {
+  content: "\e601";
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: rgb(242, 242, 242);
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.container {
+  @include font-dpr(14px);
+  max-width: $container_w;
+  margin: 0 auto;
+  //修复一些浏览器出现的横向滚动条(QQ内置浏览器)
+  overflow: hidden;
+}
+
+/*头部*/
+.header {
+  position: relative;
+  height: 87rem/$prop;
+  line-height: 87rem/$prop;
+  background-color: $mainColor;
+  text-align: center;
+  color: #fff;
+  @include font-dpr(16px);
+
+  @at-root {
+    .header-back {
+      position: absolute;
+      left: 15rem/$prop;
+      top: 0;
+
+      .icon-back {
+        @include font-dpr(20px);
+        display: inline-block;
+        margin-right: -8rem/$prop;
+        &, & + span {
+          vertical-align: middle;
+        }
+      }
+    }
+
+    .header-title {
+      vertical-align: middle;
+    }
+  }
+}
+
+section {
+  background-color: #fff;
+}
+
+/*导航*/
+.nav {
+  height: 90rem/$prop;
+  display: flex;
+  @at-root {
+    .nav-item {
+      line-height: 90rem/$prop;
+      text-align: center;
+      flex-grow: 1;
+      &.active {
+        border-bottom: 6rem/$prop solid $mainColor;
+      }
+    }
+  }
+}
+
+/*banner*/
+.banner {
+  height: 406rem/$prop;
+}
+
+/*标签*/
+.tab {
+  position: relative;
+  display: flex;
+  height: 222rem/$prop;
+  @at-root {
+    .tab-item {
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .tab-item-imgBox {
+        width: 90rem/$prop;
+        height: 90rem/$prop;
+        margin-bottom: 20rem/$prop;
+
+      }
+    }
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 3%;
+    display: block;
+    width: 94%;
+    height: 2rem/$prop;
+    background-color: #DFDFDF;
+  }
+}
+
+/*栏目*/
+.col {
+  height: 318rem/$prop;
+  overflow: hidden;
+  @at-root {
+    .col-ul {
+      height: 258rem/$prop;
+      width: 94%;
+      margin: 30rem/$prop auto 0 auto;
+      display: flex;
+      justify-content: center;
+      @at-root {
+        .col-ul-item {
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          .col-ul-item-imgBox {
+            height: 157rem/$prop;
+            margin: 0 auto;
+          }
+
+          &:not(:last-child) {
+            border-right: 1px solid #DFDFDF;
+          }
+          .col-ul-item-h3 {
+            @include font-dpr(18px);
+            font-weight: bold;
+          }
+          .col-ul-item-h4 {
+            margin-bottom: 5rem/$prop;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+/*模块*/
+.mod {
+  margin-top: 25rem/$prop;
+  padding: {
+    left: 20rem/$prop;
+    right: 20rem/$prop;
+    bottom: 20rem/$prop;
+  }
+  @at-root {
+    .mod-title {
+      line-height: 90rem/$prop;
+      border-bottom: 1px solid #DFDFDF;
+    }
+
+    .mod-item {
+      margin-top: 20rem/$prop;
+      display: flex;
+      justify-content: space-between;
+      .mod-item-imgBox {
+        height: 170rem/$prop;
+        width: 170rem/$prop;
+      }
+      .mod-item-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .item {
+          display: block;
+          line-height: 77rem/$prop;
+          width: 245rem/$prop;
+          text-align: center;
+          background-color: #DFDFDF;
+        }
+      }
+    }
+  }
+}
+
+/*文章*/
+.article {
+  margin-top: 25rem/$prop;
+  @at-root {
+    .article-item-column {
+      display: flex;
+      justify-content: flex-start;
+      padding: 20rem/$prop;
+      border-bottom: 1px solid #DFDFDF;
+      .image {
+        height: 150rem/$prop;
+        width: 214rem/$prop;
+      }
+
+      .content {
+        margin-left: 25rem/$prop;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .title {
+          margin-top: 5rem/$prop;
+          max-width: 86%;
+          @include font-dpr(16px);
+          line-height: 40rem/$prop;
+        }
+        .time {
+          margin-bottom: 5rem/$prop;
+          color: #bebebe;
+        }
+      }
+    }
+  }
+  .article-item-column-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20rem/$prop;
+    .imgsBox {
+      display: flex;
+      justify-content: space-between;
+      .imgBox {
+        height: 150rem/$prop;
+        width: 214rem/$prop;
+      }
+    }
+    .title {
+      @include font-dpr(16px);
+      margin-bottom: 20rem/$prop;
+    }
+    .time {
+      color: #bebebe;
+      margin-top: 20rem/$prop;
+    }
+
+  }
+}

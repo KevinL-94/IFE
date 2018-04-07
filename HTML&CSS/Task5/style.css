@@ -1,0 +1,185 @@
+/*清除默认样式*/
+* {
+    padding: 0;
+    margin: 0;
+    /*box-sizing: border-box;*/
+}
+
+body {
+    background-color: #dedede;
+    font-size: 15px;
+    min-width: 850px;
+    /*font-family: "微软雅黑";*/
+}
+
+/*header样式*/
+header {
+    height: 60px;
+    background-color: #333;
+    /*display: block;*/
+    line-height: 60px;
+}
+
+.left-header {
+    color: #fff;
+    margin-left: 10px;
+    float: left;
+}
+
+.right-header {
+    float: right;
+}
+
+.right-header li {
+    float: left;
+    margin-right: 30px;
+}
+
+.right-header a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.right-header a:hover {
+    color: #fff;
+}
+
+/*main样式*/
+article {
+    background-color: white;
+    margin: 30px 450px 30px 30px;
+    padding: 35px;
+    border: 1px solid #cbcbcb;
+    box-shadow: 2px 2px 3px 0px #848484;    /* offset-x | offset-y | blur-radius | spread-radius | color */
+}
+
+article h3 {
+    color: #6d6d6d;
+    margin: 10px 0px;
+    font-size: 16px;
+}
+
+article span.post {
+    color: #6d6d6d;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+article p {
+    text-indent: 2em;
+    line-height: 1.5;
+}
+
+article ul {
+    list-style: none;
+}
+
+article figure {
+    margin: 20px;
+    padding-top: 10px;
+    border: 1px solid #aaa;
+    width: 250px;
+    height: 340px;
+    text-align: center;
+    display: inline-block;    /*该元素生成一个块状盒，该块状盒随着周围内容流动，如同它是一个单独的行内盒子*/
+}
+
+article figure img {
+    height: 300px;
+    width: 220px
+}
+
+article ol {
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+
+article table {
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+article table thead th {
+    color: white;
+    background-color: #333;
+    text-align: left;
+    font-size: 15px;
+    padding: 2px;
+}
+
+article table tbody td {
+    font-size: 14px;
+    padding: 2px;
+}
+
+article table tfoot td {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 2px;
+    background-color: #ccc;
+}
+
+/*aside样式*/
+aside {
+    background-color: white;
+    /*margin: 30px;*/
+    margin-right: 20px;
+    padding: 25px 35px;
+    border: 1px solid #cbcbcb;
+    box-shadow: 2px 2px 3px 0px #848484;
+    float: right;
+    width: 320px;
+}
+
+aside h3 {
+    border-left: 3px solid #ccc;
+    font-size: 15px;
+    padding: 10px;
+}
+
+aside form {
+    margin: 10px;
+    font-size: 13px;
+}
+
+aside form div {
+    margin-bottom: 15px;
+}
+
+aside form label {
+    width: 35%;
+    float: left;    /* <label> is a incline element, float can make it become a block. */
+    text-align: right;    /* Only block element can be set width */
+}
+
+aside form p {
+    margin-left: 35%;
+    color: #aaa;
+}
+
+aside form textarea {
+    width: 50%;
+    height: 100px;
+}
+
+aside .submit {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    background-color: #3355d0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/*footer样式*/
+footer {
+    color: #fff;
+    background-color: #000;
+    padding: 10px;
+    text-align: center;
+    clear: both;
+}

@@ -1,0 +1,35 @@
+body {
+  width: 100%;
+  overflow: auto;
+  margin: 0;
+  color: #666;
+  background-color: #e9edec;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clearfix {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.iconfont {
+  font-size: 14px;
+}
+
+.pull-right {
+  float: right;
+}

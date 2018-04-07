@@ -1,0 +1,63 @@
+@import "../../node_modules/reset.scss/reset";
+
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+
+//清除浮动
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.tree{
+    @include clearfix;
+
+    > .node{
+        margin: 0 auto;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        border: 1px solid black;
+        margin-top: 50px;
+
+        &.pre{
+            background: yellow;
+        }
+        &.mid{
+            background: blue;
+        }
+        &.next{
+            background: red;
+        }
+    }
+}
+
+.left-tree{
+    @extend .tree;
+    width: 50%;
+    float: left;
+}
+
+.right-tree{
+    @extend .tree;
+    width: 50%;
+    float: right;
+}
+
+.btnBox{
+    margin-top: 40px;
+    text-align: center;
+    button {
+        width: 80px;
+        height: 30px;
+    }
+}

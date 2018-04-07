@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <title>position</title>
+    <style type="text/css">
+      .gray-block {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+        width: 400px;
+        height: 200px;
+
+        background-color: #CCC;
+      }
+
+      .gray-block:before,
+      .gray-block:after {
+        content: ' ';
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-color: #FC0;
+        position: absolute;
+      }
+
+      .gray-block:before {
+        border-radius: 0 0 50px 0;
+        left: 0;
+        top: 0;
+      }
+
+      .gray-block:after {
+        border-radius: 50px 0 0 0;
+        right: 0;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gray-block"></div>
+  </body>
+</html>

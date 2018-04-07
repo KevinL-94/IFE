@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task2_Test</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: #dedede;
+            font-size: 15px;
+        }
+
+        header {
+            background-color: #333;
+            height: 60px;
+            line-height: 60px;
+        }
+
+        .left-header {
+            float: left;
+            color: #fff;
+            margin-left: 10px;
+        }
+
+        .right-header {
+            float: right;
+        }
+
+        .right-header li {
+            float: left;
+            margin-right: 30px;
+        }
+
+        .right-header a {
+            color: #ddd;
+            text-decoration: none;
+        }
+
+        .right-header a:hover {
+            color: #fff;
+        }
+
+        article {
+            background-color: #fff;
+            margin: 30px;
+            padding: 35px;
+            border: 1px solid #cbcbcb;
+            box-shadow: 2px 2px 3px 0px #848484;
+        }
+
+        article h2 {
+            margin-bottom: 10px;
+        }
+
+        article h3 {
+            color: #6d6d6d;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        article span.post {
+            color: #6d6d6d;
+            font-size: 14px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        article p {
+            text-indent: 2em;
+            line-height: 1.5;
+        }
+
+        article ul {
+            list-style: none;
+        }
+
+        article figure {
+            border: 1px solid #aaa;
+            margin: 20px;
+            text-align: center;
+            padding-top: 10px;
+            width: 250px;
+            height: 340px;
+        }
+
+        article figure img {
+            width:220px;
+            height: 300px;
+        }
+
+        article ol {
+            margin-left: 50px;
+            margin-bottom: 10px;
+        }
+
+        article table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        article table thead th {
+            color: #fff;
+            background-color: #333;
+            text-align: left;
+            padding: 2px;
+        }
+
+        article table tbody td {
+            font-size: 14px;
+            padding: 2px;
+        }
+
+        article table tfoot td {
+            font-size: 15px;
+            font-weight: bold;
+            padding: 2px;
+            background-color: #ccc;
+        }
+
+        aside {
+            background-color: white;
+            margin: 30px;
+            padding: 35px;
+            border: 1px solid #cbcbcb;
+            box-shadow: 2px 2px 3px 0px #848484;    /* offset-x | offset-y | blur-radius | spread-radius | color */
+        }
+
+        aside h3 {
+            border-left: 3px solid #ccc;
+            font-size: 15px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        aside form {
+            margin: 10px;
+            font-size: 13px;
+        }
+
+        aside form div {
+            margin-bottom: 10px;
+        }
+
+        aside form label {
+            float: left;
+            width: 35%;
+            text-align: right;
+        }
+
+        aside form p {
+            margin-left: 35%;
+            color: #aaa;
+        }
+
+        aside form textarea {
+            width: 50%;
+            height: 100px;
+        }
+
+        aside .submit {
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            color: #fff;
+            background-color: #3355d0;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        footer {
+            color: #fff;
+            background-color: #000;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="left-header">
+            <h1>网站一级标题</h1>
+        </div>
+
+        <div class="right-header">
+            <ul>
+                <li><a href="#">导航链接一</a></li>
+                <li><a href="#">导航链接二</a></li>
+                <li><a href="#">导航链接三</a></li>
+                <li><a href="#">导航链接四</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <h2>文章一级标题</h2>
+            <h3>文章二级标题</h3>
+            <span class="post">文章作者 文章发表时间</span>
+            <p>
+                这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br>
+                这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br>
+                这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，<b>这里有个粗体字</b>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。
+            </p>
+        </article>
+        
+        <article>
+            <h2>另一篇文章一级标题</h2>
+            <h3>文章二级标题</h3>
+            <span class="post">文章作者 文章发表时间</span>
+            <p>
+                这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br>
+                这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br>
+                这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://ife.baidu.com" target="_blank">这里有一个链接点击后打开新窗口链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，<b>这里有个粗体字</b>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。
+            </p>
+            <img src="../images/github.gif" alt="GitHub">
+            <ul>
+                <li>列表项目一</li>
+                <li>列表项目二</li>
+                <li>列表项目三</li>
+            </ul>
+        </article>
+        
+        <article>
+            <h2>图片</h2>
+            <figure>
+                <figcaption>好看的图片</figcaption>
+                <img src="../images/gakki.jpg" alt="gakki">
+            </figure>
+
+            <figure>
+                <figcaption>好看的图片</figcaption>
+                <img src="../images/gakki.jpg" alt="gakki">
+            </figure>
+
+            <figure>
+                <figcaption>好看的图片</figcaption>
+                <img src="../images/gakki.jpg" alt="gakki">
+            </figure>
+
+            <figure>
+                <figcaption>好看的图片</figcaption>
+                <img src="../images/gakki.jpg" alt="gakki">
+            </figure>
+
+            <figure>
+                <figcaption>好看的图片</figcaption>
+                <img src="../images/gakki.jpg" alt="gakki">
+            </figure>
+        </article>
+        
+        <article>
+            <h2>最后一篇文章一级标题</h2>
+            <h3>二级标题</h3>
+            <span class="post">文章作者 文章发表时间</span>
+            <ol>
+                <li>排名1</li>
+                <li>排名2</li>
+                <li>排名3</li>
+            </ol>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>表头</th>
+                        <th>表头</th>
+                        <th>表头</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>表内容单元格</td>
+                        <td>表内容单元格</td>
+                        <td><a href="#">操作</a></td>
+                    </tr>
+                    <tr>
+                        <td>表内容单元格</td>
+                        <td>表内容单元格</td>
+                        <td><a href="#">操作</a></td>
+                    </tr>
+                    <tr>
+                        <td>表内容单元格</td>
+                        <td>表内容单元格</td>
+                        <td><a href="#">操作</a></td>
+                    </tr>
+                    <tr>
+                        <td>表内容单元格</td>
+                        <td>表内容单元格</td>
+                        <td><a href="#">操作</a></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>总计</td>
+                        <td colspan="2">1000</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </article>
+
+        <aside>
+            <h3>这里以后是个侧栏，这是侧栏的标题</h3>
+            <form action="" method="">
+                <div id="email">
+                    <label for="email">请输入邮箱地址：</label>
+                    <input type="email" id="email" placeholder="这是一个文本输入框"> 
+                    <p>邮箱地址请按要求格式输入</p>
+                </div>
+
+                <div id="password">
+                    <label for="password">请输入密码：</label>
+                    <input type="password" id="password" placeholder="这是一个文本输入框">
+                    <p>密码请设为6-16位英文与数字组合</p>
+                </div>
+
+                <div id="confirm-password">
+                    <label for="confirm-password">请再输入一次密码：</label>
+                    <input type="password" id="confirm-password" placeholder="这是一个文本输入框">
+                </div>
+
+                <div id="gender">
+                    <label for="gender">性别：</label>
+                    <input type="radio" id="gender" value="male" checked>男
+                    <input type="radio" id="gender" value="female">女
+                </div>
+
+                <div id="city">
+                    <label for="city">城市：</label>
+                    <select name="city" id="city">
+                        <option value="guangzhou">广州</option>
+                        <option value="shenzhen">深圳</option>
+                        <option value="zhuhai">珠海</option>
+                        <option value="dongguan">东莞</option>
+                    </select>
+                </div>
+
+                <div id="hobby">
+                    <label for="hobby">爱好：</label>
+                    <input type="checkbox" id="hobby" value="sport">运动
+                    <input type="checkbox" id="hobby" value="read">阅读
+                    <input type="checkbox" id="hobby" value="music">音乐
+                </div>
+
+                <div id="description">
+                    <label for="description">个人描述：</label>
+                    <textarea name="description" id="description" cols="30" rows="2"></textarea>
+                </div>
+
+                <button class="submit">确认提交</button>
+            </form>
+        </aside>
+    </main>
+
+    <footer>
+        <span>版权所有&copy&nbsp;Kevin Liang</span>
+    </footer>
+</body>
+</html>

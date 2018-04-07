@@ -20,7 +20,7 @@
 
         .column {
             float: left;
-            position: relative;
+            position: relative;    /*作用于#left中的right #rigth中的left*/
         }
 
         #center {
@@ -34,7 +34,7 @@
             background-color: red;
             width: 200px;
             margin-left: -100%;    /*main的宽度*/
-            right: 210px;
+            right: 210px;    /*相对center块左移210px*/
         }
 
         #right {
@@ -42,7 +42,7 @@
             background-color: blue;
             width: 150px;
             margin-left: -150px;    /*右边栏自身宽度*/
-            left: 160px;
+            left: 160px;    /*相对center块右移160px*/
         }
     </style>
 </head>
@@ -70,3 +70,9 @@
     </footer>
 </body>
 </html>
+
+<!-- 圣杯布局 -->
+<!-- 1. 对main模块设置padding-left&right，留出左右两栏的空间 -->
+<!-- 2. 对main设置宽度为width:100%，占据中部位置 -->
+<!-- 3. 三栏浮动，positon:relative，然后设置左右两侧边栏margin-left负值，使左右两侧边栏覆盖main左右两侧 -->
+<!-- 4. 利用相对位置，设置left和right属性，将两个侧边栏拉出main，形成三栏布局 -->
